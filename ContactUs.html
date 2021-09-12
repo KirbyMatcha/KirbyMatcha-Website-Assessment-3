@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US - Anime World</title>
+    <link rel="icon" href="ImagesUsed/favicon1.ico"/>
+    <link rel="stylesheet" href="CSS/Overall.css">
+    <link rel="stylesheet" href="CSS/ContactUsStylesheet.css">
+</head>
+
+<body>
+    <script src="Javascript/Overall.js"></script>
+    <script src="Javascript/OpenMedia.js"></script>
+    
+    <div class="myWrapper" id="Wrapper">
+        
+        <audio controls autoplay loop>
+            <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+        </audio> 
+
+        <div class="myHeader" id="myHeader"> 
+            <div class="myLogo"><a href="index.html"><img id="myHeader" src="LogosUsed/ChibiLogo.png" width="175px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href="index.html">HOME</a></div>
+                <div><a href="AboutUs.html">ABOUT US</a></div>
+                <div><a href="SignUp.html">SIGN UP</a></div>
+                <div><a href="ContactUs.html">CONTACT US</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="ImagesUsed/Icon.png" width="25px"></div>
+                
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+        
+    
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreGenres" id="moreGenres">
+            <div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+        </div>
+
+
+        <div class="myBody">
+            <h2>CONTACT US</h2>
+            <p>If there are any questions with the website, you can contact us via Instagram, Snapchat, Gmail, Facebook, Twitter or Discord. For any issues regarding the content displayed, you can report to any of the suggested media platforms and we will review before removing it immediately if found either offensive or inappropriate. This includes any of the following reasons:</p>
+            <ul>
+                <li>Spam</li>
+                <li>Bullying or Harrasment</li>
+                <li>Racist language or activity</li>
+                <li>Nudity or sexual activity</li>
+                <li>Hate speech or symbols</li>
+                <li>Violence or dangerous organisations</li>
+                <li>Selling illegal or regulated goods</li>
+            </ul>
+            <p>Otherwise, thank you for visiting us.</p>
+        </div>
+
+        <div class="SocialMedia">   
+            <div class="Subheading" onclick="openMedia()"><h2>Social Media<div class="later">Click Here</div></h2></div>
+            <div class="Logos">
+                <img src="LogosUsed/FacebookLogo.png" width=40px>
+                <img src="LogosUsed/InstagramLogo.png" width=40px>
+                <img src="LogosUsed/TwitterLogo.png" width=40px>
+                <img src="LogosUsed/EmailLogo.png" width=40px>
+            </div>        
+            <div class="closeMedia" onclick="closeMedia()" id="closeMedia">X</div>
+            <div class="Medias" id="myDropdown">
+                <div>Facebook</div>
+                <div>Instagram</div>
+                <div>Twitter</div>
+                <div>Email</div>
+            </div>
+        </div>
+
+        <div class="Ad">
+            
+        </div>
+ 
+        <div class="myGap"></div>
+
+        <div class="myContact">
+            <div class="Logo">
+                <img src="LogosUsed/FacebookLogo.png" width=20px>
+                <img src="LogosUsed/InstagramLogo.png" width=20px>
+                <img src="LogosUsed/TwitterLogo.png" width=20px>
+                <img src="LogosUsed/EmailLogo.png" width=20px>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+
+    </div>
+</body>
+</html>

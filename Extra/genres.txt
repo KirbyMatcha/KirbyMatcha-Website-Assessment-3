@@ -1,0 +1,78 @@
+<div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+
+
+ .triangle-right {
+	    width: 0;
+	    height: 0;
+	    border-top: 6px solid transparent;
+	    border-left: 11px solid white;
+	    border-bottom: 6px solid transparent;
+        margin: 1.4px 0px 0 7px;
+        float: right;
+    }
+        <div class="triangle-right"></div>
+
+
+
+
+  display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: auto;
+        grid-template-areas: "Clothes Live Beaut"
+
+    }
+    .Clothing {
+        grid-area: Clothes;
+        border: solid black;
+        display: grid;
+        place-content: center;
+        padding: 10px;
+        margin: 9px 0px 9px 9px;
+    }
+    .Living {
+        grid-area: Live;
+        border: solid black;
+        display: grid;
+        place-content: center;
+        padding: 10px;
+        margin: 9px;
+    }
+    .Beauty {
+        grid-area: Beaut;
+        border: solid black;
+        display: grid;
+        place-content: center;
+        padding: 10px;
+        margin: 9px 0px 9px 0px;

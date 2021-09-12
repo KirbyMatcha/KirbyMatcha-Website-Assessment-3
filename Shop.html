@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP - Anime World</title>
+    <link rel="icon" href="ImagesUsed/favicon1.ico"/>
+    <link rel="stylesheet" href="CSS/Overall.css">
+    <link rel="stylesheet" href="CSS/ShopStylesheet.css">
+</head>
+<body>
+    
+    <script src="Javascript/Overall.js"></script>
+    <script src="Shop.js"></script>
+
+    <audio controls autoplay loop>
+        <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+    </audio> 
+
+    <div class="myWrapper" id="Wrapper">
+        
+        <div class="myHeader" id="myHeader"> 
+            <div class="myLogo"><a href="index.html"><img id="myHeader" src="LogosUsed/ChibiLogo.png" width="175px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href="index.html">HOME</a></div>
+                <div><a href="AboutUs.html">ABOUT US</a></div>
+                <div><a href="SignUp.html">SIGN UP</a></div>
+                <div><a href="ContactUs.html">CONTACT US</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="ImagesUsed/Icon.png" width="25px"></div>
+                
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+            
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreGenres" id="moreGenres">
+            <div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+        </div>
+
+        <div class="HeaderImage">
+            <div class="bg-image"><img src="ImagesUsed/Backgroundimg.png" width="100%"></div>
+
+            <div class="title">
+            <h1>Welcome to our Shop</h1>
+            <p>Take a look around</p>
+            </div>
+        </div>
+
+        <div class="myShop">
+            <div class="Shop">
+                <div class="Clothing">
+                    <a href="#Clothing"><img src="ImagesUsed/clothing.gif" alt="Avatar" class="image" width=100%></a>
+                    <div class="middle">
+                      <div class="text">Clothing and Accessories</div>
+                    </div>
+                </div>
+                  
+                <div class="Home">
+                    <a href="#Home"><img src="ImagesUsed/home.gif" alt="Avatar" class="image" width=100%></a>
+                    <div class="middle">
+                        <a id="SHOP"><div class="text">Home and Living</div></a>
+                    </div>
+                </div>
+                  
+                <div class="Beauty">
+                    <a href="#Beauty"><img src="ImagesUsed/beauty1.gif" alt="Avatar" class="image" width=100%></a>
+                    <div class="middle">
+                        <div class="text">Beauty and Health</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="title1"><h2>Clothing and Accessories</h2></div>
+        <div class="myBody1">
+            <div class="Section">
+                <a id="Clothing"><img src="ImagesUsed/clothing1.png"></a>
+                <img src="ImagesUsed/clothing2.png">
+                <img src="ImagesUsed/clothing3.png">
+                <img src="ImagesUsed/clothing4.png">
+                <img src="ImagesUsed/clothing5.png">
+            </div>
+
+            <div class="Section">
+                <img src="ImagesUsed/clothing6.png">
+                <img src="ImagesUsed/clothing7.png">
+                <img src="ImagesUsed/clothing8.png">
+                <img src="ImagesUsed/clothing9.png">
+                <img src="ImagesUsed/clothing10.png">
+            </div>
+
+            <div class="Section">
+                <img src="ImagesUsed/clothing11.png">
+                <img src="ImagesUsed/clothing12.png">
+                <img src="ImagesUsed/clothing13.png">
+                <img src="ImagesUsed/clothing14.png">
+                <img src="ImagesUsed/clothing15.png">
+            </div>
+
+
+        </div>
+
+        
+        <div class="title2"><h2>Home and Living</h2></div>
+        <div class="myBody2">
+            <div class="Section">
+                <a id="Home"><img src="ImagesUsed/home1.png"></a>
+                <img src="ImagesUsed/home2.png">
+                <img src="ImagesUsed/home3.png">
+                <img src="ImagesUsed/home4.png">
+                <img src="ImagesUsed/home5.png">
+            </div>
+
+            <div class="Section">
+                <img src="ImagesUsed/home6.png">
+                <img src="ImagesUsed/home7.png">
+                <img src="ImagesUsed/home8.png">
+                <img src="ImagesUsed/home9.png">
+                <img src="ImagesUsed/home10.png">
+            </div>
+
+            <div class="Section">
+                <img src="ImagesUsed/home11.png">
+                <img src="ImagesUsed/home12.png">
+                <img src="ImagesUsed/home13.png">
+                <img src="ImagesUsed/home14.png">
+                <img src="ImagesUsed/home15.png">
+            </div>
+
+
+        </div>
+
+        <div class="title3"><h2>Beauty and Health</h2></div>
+        <div class="myBody3">
+            <div class="Section">
+                <a id="Beauty"><img src="ImagesUsed/beauty1.png"></a>
+                <img src="ImagesUsed/beauty2.png">
+                <img src="ImagesUsed/beauty3.png">
+                <img src="ImagesUsed/beauty4.png">
+                <img src="ImagesUsed/beauty10.png">
+            </div>
+
+            <div class="Section">
+                <img src="ImagesUsed/beauty11.png">
+                <img src="ImagesUsed/beauty7.png">
+                <img src="ImagesUsed/beauty8.png">
+                <img src="ImagesUsed/beauty9.png">
+                <img src="ImagesUsed/beauty5.png">
+            </div>
+
+            <div class="Section">
+                <img src="ImagesUsed/beauty6.png">
+                <img src="ImagesUsed/beauty12.png">
+                <img src="ImagesUsed/beauty13.png">
+                <img src="ImagesUsed/beauty14.png">
+                <img src="ImagesUsed/beauty15.png">
+            </div>
+
+
+        </div>
+
+        <div class="myGap"></div>
+
+        <div class="myContact">
+            <div class="Logo">
+                <img src="LogosUsed/FacebookLogo.png" width=20px>
+                <img src="LogosUsed/InstagramLogo.png" width=20px>
+                <img src="LogosUsed/TwitterLogo.png" width=20px>
+                <img src="LogosUsed/EmailLogo.png" width=20px>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+    </div>
+
+</body>
+</html>

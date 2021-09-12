@@ -1,0 +1,152 @@
+.myWrapper {
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "Header Header"
+                        "Genres Genres"
+                        "moreGenres moreGenres "
+                        "Body SocialMedia"
+                        "Ad Ad"
+                        "Gap Gap"
+                        "Contact Contact"
+
+}
+.myBody {
+    grid-area: Body;
+    padding: 250px 10% 100px 10%;
+    background-color: white;
+    line-height: 200%;
+}
+.myBody h2 {
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 10px;
+    border-bottom: solid black;
+}
+.myBody p {
+    font-size: 13px;
+}
+.myBody ul {
+    font-size: 13px;
+}
+.SocialMedia {
+    grid-area: SocialMedia;
+    background-color: white;
+    margin: 250px 20% 40px 0 ;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px 70px auto ;
+    grid-template-areas: "Subheading"
+                        "Logos"
+                        "Medias"
+}
+.Subheading {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: auto;
+    margin: 0;
+    border: solid black;
+    grid-area: Subheading;
+    display: grid;
+    place-content: center;
+    font-size: 15px;
+}
+.later {
+    display: none;
+    font-size: small;
+    padding: 5px 0;
+}
+.closeMedia {
+    display: none;
+}
+.Logos {
+    grid-area: Logos;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Logos img {
+    padding:20px 5px 10px 5px;
+}
+.Medias > div {
+    background-color: white;
+    margin: 25px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    border: solid black;
+    grid-area: Medias;
+    font-size: 15px;
+}
+.Ad {
+    grid-area: Ad;
+    height: 200px;
+    background-color: bisque;
+}
+
+
+@media (max-width :900px) {
+    .SocialMedia {
+        margin: 250px 26% 40px 0 ;
+    }
+}
+
+@media (max-width :705px) {
+    .myWrapper {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas: "Header"
+                            "Genres"
+                            "moreGenres"
+                            "Body"
+                            "SocialMedia"
+                            "Ad"
+                            "Gap"
+                            "Contact"
+    }
+    .SocialMedia {
+        margin: 15%;
+    }
+    .Medias {
+        display: none;
+    }
+    .Medias {
+        position: absolute;
+        background-color: white;
+        width: 72%;
+        justify-content: space-evenly;
+        display: none;
+        z-index: 99;
+        top: 141%;
+    }
+    .Subheading:hover {
+        background-color: grey;
+        transition: .5s ease;
+        cursor: pointer;
+        border: none;
+    }
+    .closeMedia {
+        position: absolute;
+        right: 14%;
+        top: 140%;
+        font-size: x-large;
+        font-weight: bold;
+        margin: 0;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 998;
+    }
+    .closeMedia:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .later {
+        display: block;
+        right: 0;
+    }
+
+
+}

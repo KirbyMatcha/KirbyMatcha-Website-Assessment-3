@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPULAR ANIME - Anime World</title>
+    <link rel="icon" href="ImagesUsed/favicon1.ico"/>
+    <link rel="stylesheet" href="CSS/Overall.css">
+    <link rel="stylesheet" href="CSS/PopularAnime.css">
+</head>
+
+<body>
+    <script src="Javascript/Overall.js"></script>
+    
+    <audio controls autoplay loop>
+        <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+    </audio> 
+
+    <div class="myWrapper" id="Wrapper">
+        
+        <div class="myHeader" id="myHeader"> 
+            <div class="myLogo"><a href="index.html"><img id="myHeader" src="LogosUsed/ChibiLogo.png" width="175px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href="index.html">HOME</a></div>
+                <div><a href="AboutUs.html">ABOUT US</a></div>
+                <div><a href="SignUp.html">SIGN UP</a></div>
+                <div><a href="ContactUs.html">CONTACT US</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="ImagesUsed/Icon.png" width="25px"></div>
+                
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+        
+    
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreGenres" id="moreGenres">
+            <div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+        </div>
+
+        <div class="Popular1">
+            <h2>Popular Anime Ranking 2021</h2>
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                    <div><img src="ImagesUsed/rank1.png"></div>
+                    <div><img src="ImagesUsed/rank2.png"></div>
+                    <div><img src="ImagesUsed/rank3.png"></div>
+                    <div><img src="ImagesUsed/rank4.png"></div>
+                    <div><img src="ImagesUsed/rank5.png"></div>
+                </div>
+              
+                <div class="mySlides1">
+                    <div><img src="ImagesUsed/rank6.png"></div>
+                    <div><img src="ImagesUsed/rank7.png"></div>
+                    <div><img src="ImagesUsed/rank8.png"></div>
+                    <div><img src="ImagesUsed/rank9.png"></div>
+                    <div><img src="ImagesUsed/rank10.png"></div>
+                </div>
+              
+                <div class="mySlides1">
+                    <div><img src="ImagesUsed/rank11.png"></div>
+                    <div><img src="ImagesUsed/rank12.png"></div>
+                    <div><img src="ImagesUsed/rank13.png"></div>
+                    <div><img src="ImagesUsed/rank14.png"></div>
+                    <div><img src="ImagesUsed/rank15.png"></div>
+                </div>
+              
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+              </div>
+        </div>
+
+        <div class="myBody1">
+            <table style="width: 100%">
+                <tr>
+                    <th>RANKING</th>
+                    <th>NAME</th>
+                    <th>AIRED</th>
+                    <th>GENRES</th>
+                    <th>AUTHOR</th>
+                    <th>STATUS</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Wonder Egg Priority</td>
+                    <td>13 January 2021 - 31 March 2021</td>
+                    <td>Pyschological Horror, Fantasy</td>
+                    <td>Shinji Nojima</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Attack On Titan: The Final Season</td>
+                    <td>7 December 2020 - 29 March 2021</td>
+                    <td>Action fiction, Dark fantasy, Apocalyptic and post-apocalyptic fiction, Drama</td>
+                    <td>Hajime Isayama</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Non Non Biyori Nonstop</td>
+                    <td>11 January 2021 - 29 March 2021</td>
+                    <td>Comedy, Slice of life</td>
+                    <td>Atto</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dr Stone Wars</td>
+                    <td>14 January 2021 - 25 March 2021</td>
+                    <td>Sci-fi, Adventure, Comedy, Shounen</td>
+                    <td>Riichiro Inagaki</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hataraku Saibou (Cells At Work!!)</td>
+                    <td>8 July 2018 - 30 September 2018</td>
+                    <td>Comedy, Shounen</td>
+                    <td>Akane Shimizu</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>SK8 The Infinity</td>
+                    <td>10 January 2021 - 4 April 2021</td>
+                    <td>Comedy, Sports</td>
+                    <td>Ichiro Okouchi</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Re: Zero - Starting Life In Another World Season 2</td>
+                    <td>8 July 200 - 30 September 2020</td>
+                    <td>Pyschological, Drama, Thriller, Fantasy</td>
+                    <td>Tappei Nagatsuki</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Yuru Camp Season 2</td>
+                    <td>7 January 2021 - 1 April 2021</td>
+                    <td>Slice of life, Comedy</td>
+                    <td>Jin Tanaka Mutsumi Ito</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>The Quintessential Quintuplets 2</td>
+                    <td>8 January 2021 - 26 March 2021</td>
+                    <td>Harem, Comedy, Romance, School, Shounen</td>
+                    <td>Negi Haruba</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Beastars Season 2</td>
+                    <td>7 January 2021 - 25 March 2021</td>
+                    <td>Slice of life, Pyschological, Drama, School, Shounen</td>
+                    <td>Paru Itagaki</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Kemono Jihen</td>
+                    <td>10 January 2021 - 28 March 2021</td>
+                    <td>Action, Mystery, Demons, Supernatural, Shounen</td>
+                    <td>Shō Aimoto</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Mushoku Tensei: Jobless Reincarnation</td>
+                    <td>11 January 2021 - 22 March 2021</td>
+                    <td>Drama, Magic, Ecchi, Fantasy</td>
+                    <td>Rifujin na Magonote</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Horimiya</td>
+                    <td>10 January 2021 - 4 April 2021</td>
+                    <td>Slice of life, Comedy, Romance, School, Shounen</td>
+                    <td>HERO</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>World Trigger Season 2</td>
+                    <td>10 January 2021 - 4 April 2021</td>
+                    <td>Action, Sci-fi, Supernatural, School, Shounen</td>
+                    <td>Daisuke Ashihara</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>The Promised Neverland Season 2</td>
+                    <td>8 January 2021 - 26 March 2021</td>
+                    <td>Sci-fi, Mystery, Pyschological, Thriller, Shounen</td>
+                    <td>Toshiya Ono</td>
+                    <td>Finished</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div class="Popular2">
+            <h2>Popular Anime Ranking 2020</h2>
+            <div class="slideshow-container">
+                <div class="mySlides2">
+                    <div><img src="ImagesUsed/rank01.png"></div>
+                    <div><img src="ImagesUsed/rank02.png"></div>
+                    <div><img src="ImagesUsed/rank03.png"></div>
+                    <div><img src="ImagesUsed/rank04.png"></div>
+                    <div><img src="ImagesUsed/rank05.png"></div>
+                </div>
+              
+                <div class="mySlides2">
+                    <div><img src="ImagesUsed/rank06.png"></div>
+                    <div><img src="ImagesUsed/rank07.png"></div>
+                    <div><img src="ImagesUsed/rank08.png"></div>
+                    <div><img src="ImagesUsed/rank09.png"></div>
+                    <div><img src="ImagesUsed/rank010.png"></div>
+                </div>
+              
+                <div class="mySlides2">
+                    <div><img src="ImagesUsed/rank011.png"></div>
+                    <div><img src="ImagesUsed/rank012.png"></div>
+                    <div><img src="ImagesUsed/rank013.png"></div>
+                    <div><img src="ImagesUsed/rank014.png"></div>
+                    <div><img src="ImagesUsed/rank015.png"></div>
+                </div>
+              
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+              </div>
+        </div>
+        
+        <div class="myBody2">
+            <table style="width: 100%">
+                <tr>
+                    <th>RANKING</th>
+                    <th>NAME</th>
+                    <th>AIRED</th>
+                    <th>GENRES</th>
+                    <th>AUTHOR</th>
+                    <th>STATUS</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Tower Of God</td>
+                    <td>2 April 2020 - 24 June 2020</td>
+                    <td>Action, Dark fantasy</td>
+                    <td>Lee Jong Hui</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ascendance Of A Bookworm (Season 2)</td>
+                    <td>3 October 2019 - 26 December 2019</td>
+                    <td>Slice of life, Fantasy</td>
+                    <td>Miya Kazuki</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>BanG Dream! (Season 3)</td>
+                    <td>21 January 2017 - 22 April 2017</td>
+                    <td>Music</td>
+                    <td>Yuniko Ayana</td>
+                    <td>Finished/td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dorohedoro</td>
+                    <td>13 January 2020 - 30 March 2020</td>
+                    <td>Action, Comedy, Horror, Magic, Fantasy, Seinen</td>
+                    <td>Q Hayashida</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Keep Your Hands Off Eizouken!</td>
+                    <td>6 January 2020 - 23 March 2020</td>
+                    <td>Adventure, Comedy, School, Seinen</td>
+                    <td>Sumito Oowara</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Fruits Basket (Season 2)</td>
+                    <td>7 April 2020 - 22 September 2020</td>
+                    <td>Slice of life, Comedy, Supernatural, Drama, Romance, Shoujo</td>
+                    <td>Taku Kishimoto</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>A Certain Scientific Railgun T</td>
+                    <td>10 January 2020 - 25 September 2020</td>
+                    <td>Action, Sci-fi, Super Power</td>
+                    <td>Kazuma Kamach</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Haikyuu!! To The Top</td>
+                    <td>11 January 2020 - 4 April 2020</td>
+                    <td>Comedy, Sports, Drama, School, Shounen</td>
+                    <td>Haruichi Furudate</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Kingdom (Season 3)</td>
+                    <td>6 April 2020 - Ongoing</td>
+                    <td>Action, Military, Historical, Seinen</td>
+                    <td>Yasuhisa Hara</td>
+                    <td>Ongoing</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Kaguya-Sama: Love Is War (Season 2)</td>
+                    <td>11 April 2020 - 27 June 2020</td>
+                    <td>Comedy, Pyschological, Romance, School, Seinen</td>
+                    <td>Yasuhiro Nakanishi</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>The God Of High School</td>
+                    <td>6 July 2020 - 28 September 2020</td>
+                    <td>Action, Sci-fi, Adventure, Comedy, Supernatural, Martial arts, Fantasy</td>
+                    <td>Yongje Park</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>IDOLiSH7: Second Beat!</td>
+                    <td>5 April 2020 - 27 December 2020</td>
+                    <td>Music, Drama</td>
+                    <td>Tsunashi Ryunosuke</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Major 2nd (Season 2)</td>
+                    <td>10 December 2005 - 10 June 2006</td>
+                    <td>Comedy, Drama, Shounen, Sports</td>
+                    <td>Takuya Mitsuda</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Enen No Shouboutai: Ni No Shou</td>
+                    <td>4 July 2020 - 12 December 2020</td>
+                    <td>Action, Supernatural, Shounen</td>
+                    <td>Atsushi Ōkubo</td>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Re:Zero Kara Hajimeru Isekai Seikatsu (Season 2)</td>
+                    <td>8 July 2020 - 30 September 2020</td>
+                    <td>Pyschological, Drama, Thriller, Fantasy</td>
+                    <td>Nagatsuki Tappei</td>
+                    <td>Finished</td>
+                </tr>
+            </table>
+        </div>
+
+        
+ 
+        <div class="myGap"></div>
+
+        <div class="myContact">
+            <div class="Logo">
+                <img src="LogosUsed/FacebookLogo.png" width=20px>
+                <img src="LogosUsed/InstagramLogo.png" width=20px>
+                <img src="LogosUsed/TwitterLogo.png" width=20px>
+                <img src="LogosUsed/EmailLogo.png" width=20px>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+
+    </div>
+
+    <script src="Javascript/popular.js"></script>
+
+</body>
+</html>

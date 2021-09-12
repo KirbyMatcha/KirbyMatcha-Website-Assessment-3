@@ -1,0 +1,73 @@
+.myWrapper {
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "Header Header Header"
+                        "Genres Genres Genres"
+                        "moreGenres moreGenres moreGenres "
+                        "Body Body Body"
+                        "Gap Gap Gap"
+                        "Contact Contact Contact"
+
+}
+
+.myBody {
+    grid-area: Body;
+    padding: 75px 25px 75px 25px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px 50px;
+    margin: 300px 20% 100px 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+}
+
+ 
+input[type=text] {  
+padding: 10px;  
+margin-top: 8px;  
+width: 300px;
+font-size: 13px;  
+border: 1px solid black;
+border-radius: 3px;
+}  
+#First input[type=text] {
+    margin-left: 132px;
+}
+#Last input[type=text] {
+    margin-left: 132px;
+}
+#Email input[type=text] {
+    margin-left: 164px;
+}
+#Phone input[type=text] {
+    margin-left: 109px;
+}
+#Username input[type=text] {
+    margin-left: 137px;
+}
+#Password input[type=text] {
+    margin-left: 139px;
+}
+.Check {
+    display: flex;
+    justify-content: center;
+}
+input[type=checkbox] {
+    margin-right: 10px;
+}
+.PersonalInfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+}
+.SubmitButton {
+    display: grid;
+    place-content: center;
+}
+input[type=submit] {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}

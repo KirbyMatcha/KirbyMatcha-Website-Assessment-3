@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    a {
+        text-decoration:none;
+        color: white;
+    }
+    body {
+        margin: 0;
+        font-family: poppins,sans-serif;;
+        padding: 0px;
+        overflow-x: hidden;
+        }
+
+    .myWrapper {
+        display: grid;
+        grid-template-columns: 30vw 40vw 30vw;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "Header Header Header"
+                            "Genres Genres Genres"
+                            "Slideshow Slideshow Slideshow"
+                            "Index Intro News"
+                            "Recent Recent Recent"
+                            "Ad Ad Ad"
+                            "Popular Popular Popular"
+                            "Search Search Search"
+                            "Event Event Event"
+                            "Shop Shop Shop"
+                            "Contact Contact Contact"
+
+    }
+    
+    .myHeader {
+        grid-area: Header;
+        background-color: black;  
+        z-index: 999;   
+        position: fixed;  
+        width: 100%;
+        padding: 0 20vw 0 21vw;
+        opacity: 20%;
+    }
+    .myHeader > div {
+        background-color: black;
+        margin: 0px;
+        padding: 20px;
+        padding-top: 75px;
+        float: left;
+    }
+    .myHeader > div:hover {
+        font-size: large;
+        transition: 0.1s;
+        font-weight: bold;
+    }
+    /* Page content */
+    .content {
+        padding: 16px;
+    }
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+    .sticky {
+        position: fixed;
+        top: 60;
+        width: 100%
+    }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+        padding-top: 102px;
+    }
+
+    .myGenre {
+        grid-area: Genres;
+        background-color: grey;
+        padding: 120px 20vw 0 20vw;
+        color: white;
+        font-weight: bold;
+        z-index: 99; 
+        position: fixed;
+    }
+    .myGenre > div {
+        margin: 12px;
+        padding: auto;
+        padding-left: 39px;
+        float: left;
+    }
+    .triangle-right {
+	    width: 0;
+	    height: 0;
+	    border-top: 6px solid transparent;
+	    border-left: 11px solid white;
+	    border-bottom: 6px solid transparent;
+        margin: 1.4px 0px 0 7px;
+        float: right;
+    }
+
+    .mySlideshow {
+        grid-area: Slideshow;
+        background-color: blanchedalmond;
+        padding: 6px;
+        min-width: 1000px;
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        padding: 340px 450px  0 450px
+    }
+
+    .mySlides {
+        display: none;
+
+    }
+
+    .numbertext {
+        color: white;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    .myInd {
+        grid-area: Index;
+        background-color: pink;
+        padding: 6px;
+        margin-left: 150px;
+    }
+    .myInd > ul {
+        list-style-type: none;
+        padding-right: 30px;
+    }
+    li {
+        background-color: black;
+        margin: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 17px;
+    }
+        
+    
+    .myIntroduction {
+        grid-area: Intro;
+        background-color: whitesmoke;
+        padding: 6px;
+    }
+    .myNews {
+        grid-area: News;
+        background-color: violet;
+        padding: 6px;
+        margin-right: 150px;
+    }
+    .myRecent {
+        grid-area: Recent;
+        background-color: tomato;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .myAdvertisement {
+        grid-area: Ad;
+        background-color: thistle;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .myPopularAnime {
+        grid-area: Popular;
+        background-color: turquoise;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .mySearchAnime {
+        grid-area: Search;
+        background-color: yellow;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .myEvent {
+        grid-area: Event;
+        background-color: blue;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .myShop {
+        grid-area: Shop;
+        background-color: beige;
+        padding: 6px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .myContact {
+        grid-area: Contact;
+        background-color: black;
+        color: white;
+        padding: 6px;
+    }
+
+</style>
+
+
+
+<body>
+   
+    <div class="myWrapper">
+        
+        
+            
+        <div class="myHeader" id="myHeader">
+                    <div><a href="HomePage.html">Home</a></div>
+                    <div><a href="AboutUs.html">About Us</a></div>
+                    <div><a href="SignUp.html">Sign Up</a></div>
+                    <div><a href="ContactUs.html">Contact Us</a></div>
+            
+        </div>
+        
+    
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div>MORE<div class="triangle-right"></div></div>
+            <div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+        </div>
+        
+        <div class="mySlideshow">
+            <h2>SlideShow</h2>
+            <div class="mySlides">
+                <div class="numbertext">1 / 7</div>
+                <img src="pic1.png" style="width: 100%">
+            </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">2 / 7</div>
+                <img src="pic2.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">3 / 7</div>
+                <img src="pic3.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">4 / 7</div>
+                <img src="pic4.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img src="pic5.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img src="pic6.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img src="pic7.png" style="width: 100%">
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+    
+        
+        </div>
+    
+        <div class="myInd">
+            <ul>
+                <li>Recent</li>
+                <li>Popular</li>
+                <li>Anime List</li>
+                <li>Shop</li>
+                <li>Join Us</li>
+            </ul>
+        </div>
+    
+        <div class="myIntroduction">
+            <p>Short Introduction - Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima nostrum illum recusandae dolor perferendis vitae reiciendis similique velit nemo cumque facere exercitationem autem quam at praesentium et totam soluta, enim quo! Delectus molestiae possimus quo voluptates consequuntur ea voluptatibus consequatur! Libero, tempora. Tempora ipsam corrupti consectetur blanditiis nam repudiandae voluptas beatae, laboriosam impedit asperiores error ea! Commodi rem, voluptatem eos dolore ullam exercitationem quidem enim earum libero aliquid alias vitae dignissimos nesciunt blanditiis vero molestias. Quaerat beatae, eveniet doloremque facere aperiam adipisci nulla veritatis, rem harum aspernatur libero molestias. Doloremque itaque, quo dignissimos excepturi eaque vel atque qui nam?</p>
+            
+        </div>
+        <div class="myNews">
+            <h3>WHAT'S NEW</h3>
+        </div>        
+    
+        <div class="myRecent">
+            <h2>RECENT RELEASE</h2>
+            
+            <h3>Genres</h3>
+    
+            <h3>Last Month</h3>
+        </div>
+
+        <div class="myAdvertisement">
+            <h2>Advertisement</h2>
+        </div>
+
+        <div class="myPopularAnime">
+            <h2>Popular Anime</h2>
+        </div>
+
+        <div class="mySearchAnime">
+            <h2>Search Anime</h2>
+        </div>
+
+        <div class="myEvent">
+            <h2>Event</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit at, eos quis repellat culpa impedit perferendis cum. Cumque nobis labore atque est, quos deleniti, perspiciatis neque error laudantium modi eius quaerat voluptate, harum sed quis! Maxime odit corrupti ullam eveniet accusamus eligendi fugit iure eaque, voluptate aspernatur est nisi beatae fuga sapiente porro cum laudantium maiores eum laborum tenetur dolores expedita placeat illo iusto! Esse impedit doloribus autem sed praesentium itaque reiciendis veritatis iure a quisquam! Esse nemo nostrum perferendis! Sunt totam possimus ipsam impedit, voluptates voluptatem voluptatum incidunt error architecto enim magni doloribus quam quos sapiente distinctio harum.</p>
+        </div>
+
+
+        <div class="myShop">
+            <h2>Clothing and Accessories</h2>
+            <h2>Home and Living</h2>
+            <h2>Beauty and Health</h2>
+        </div>
+
+        <div class="myContact">
+            <h2>Contact Information</h2>
+            <p>Balhh</p>
+        </div>
+        
+    </div>
+
+    <script>
+        
+        
+
+        var slideIndex = 0;
+        showSlides();
+            
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+          }  
+          
+   </script>          
+    
+    
+
+      
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Joseph Odunsi" />
+    <meta name="description" content="Create an image slider with HTML, CSS and JavaScript" />
+    <meta name="keywords" content="image slider, carousel, codepen, css, js" />
+    <title>Image Slider</title>
+  </head>
+  <style>
+    .mySlideshow .Prev,
+    .mySlideshow .Next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .mySlideshow .Prev:hover,
+    .mySlideshow .Next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .mySlideshow .Prev {
+        left: 2px;
+    }
+
+    .mySlideshow .Next {
+        right: 2px;
+    }
+
+    .dots-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .dots-container .dot {
+        cursor: pointer;
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        color: #333;
+        border-radius: 50%;
+        background-color: #dfd6ce;
+        transition: background-color 0.6s ease;
+    }
+
+    .dots-container .dot.active {
+        background-color: #717171;
+    }
+    .dots-container .dot:hover {
+        background-color: #8f8f8f;
+    }
+
+    * {
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100%;
+/*   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+    }
+
+    body h1 {
+        text-align: center;
+    }
+
+    .mySlideshow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+        position: relative;
+    }
+
+    .mySlideshow .mySlides {
+      display: none;
+      width: 100%;
+    }
+
+    .mySlideshow .mySlides.fade {
+      animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+
+    .mySlideshow .mySlides img {
+      width: 100%;
+    }
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1s;
+        animation-name: fade;
+        animation-duration: 1s;
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+  </style>
+  <body>
+    <h1>Image Slider</h1>
+    <div class="mySlideshow">
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic1.png' alt=''>
+      </div>
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic2.png' alt=''>
+      </div>
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic3.png' alt=''>
+      </div>
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic4.png' alt=''>
+      </div>
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic5.png' alt=''>
+      </div>
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic6.png' alt=''>
+      </div>
+      <div class="mySlides fade">
+        <img src='ImagesUsed/pic7.png' alt=''>
+      </div>
+
+      <a href="#" class="Prev" title="Previous">&#10094;</a>
+      <a href="#" class="Next" title="Next">&#10095;</a>
+    </div>
+
+    <div class="dots-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+   
+    <script>
+        let currentSlide = 0;
+const slides = document.querySelectorAll(".mySlides")
+const dots = document.querySelectorAll('.dot')
+
+const init = (n) => {
+  slides.forEach((slide, index) => {
+    slide.style.display = "none"
+    dots.forEach((dot, index) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+const next = () => {
+  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+  init(currentSlide)
+}
+
+const prev = () => {
+  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+  init(currentSlide)
+}
+
+document.querySelector(".next").addEventListener('click', next)
+
+document.querySelector(".prev").addEventListener('click', prev)
+
+
+setInterval(() => {
+  next()
+}, 3000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    console.log(currentSlide)
+    init(i)
+    currentSlide = i
+  })
+})
+    </script>
+  </body>
+</html>

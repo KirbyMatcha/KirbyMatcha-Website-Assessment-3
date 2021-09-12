@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    a {
+        text-decoration:none;
+        color: white;
+    }
+    body {
+        margin: 0;
+        font-family: poppins,sans-serif;;
+        padding: 0px;
+        overflow-x: hidden;
+        }
+
+    .myWrapper {
+        display: grid;
+        grid-template-columns: 30vw 40vw 30vw;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "Header Header Header"
+                            "Genres Genres Genres"
+                            "Slideshow Slideshow Slideshow"
+                            "Index Intro News"
+                            "Recent Recent List"
+                            "Recent Recent Month"
+                            "Ad Ad Ad"
+                            "Popular Popular Popular"
+                            "Soon Soon Soon"
+                            "Event Event Event"
+                            "Shop Shop Shop"
+                            "Contact Contact Contact"
+
+    }
+    
+    .myHeader {
+        grid-area: Header;
+        background-color: black;  
+        z-index: 999;   
+        position: fixed;  
+        width: 100%;
+        padding: 0 20vw 0 21vw;
+        opacity: 20%;
+    }
+    .myHeader > div {
+        background-color: black;
+        margin: 0px;
+        padding: 20px;
+        padding-top: 75px;
+        float: left;
+    }
+    .myHeader > div:hover {
+        font-size: large;
+        transition: 0.1s;
+        font-weight: bold;
+    }
+    .myGenre {
+        grid-area: Genres;
+        background-color: grey;
+        width: 100vw;
+        padding: 115px 0 0 0 ;
+        color: white;
+        font-weight: bold;
+        z-index: 99; 
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .myGenre > div {
+        margin: 12px;
+        padding: 4px 25px 4px 25px;
+    }
+    
+    .more {
+        padding-left: 4px;
+    }
+
+    .mySlideshow {
+        grid-area: Slideshow;
+        background-color: rgba(250, 248, 248, 0.747);
+        padding: 10px;
+        min-width: 1000px;
+        max-width: 1000px;
+        position: relative;
+        margin: 0;
+        padding: 165px 450px  20px 450px
+    }
+
+    .mySlides {
+        display: none;
+
+    }
+
+    .numbertext {
+        color: white;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+    .myInd {
+        grid-area: Index;
+        background-color: white;
+        margin-left: 200px;
+        padding-top: 40px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .myInd > div {
+        background-color: black;
+        margin: 20px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        padding: 25px;
+    }
+        
+    
+    .myIntroduction {
+        grid-area: Intro;
+        background-color: white;
+        line-height: 30px;
+        padding: 70px 20px 0 20px;
+    }
+    .myNews {
+        grid-area: News;
+        background-color: white;
+        padding: 20px 5px 5px 5px ;
+        margin-right: 200px;
+        margin: 50px;
+    }
+
+    table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+        padding: 10px 50px 10px 10px;
+        
+    }
+    th {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    .myRecent {
+        grid-area: Recent;
+        background-color: white;
+        margin: 20px 0px 20px 175px;
+        border: solid black;
+    }
+    .myRecent h2 {
+        padding: 19px 0px 19px 30px;
+        background-color: black;
+        color: white;
+    }
+    .myList {
+        background-color: white;
+        grid-area: List;
+        border: solid black;
+        margin: 20px 175px 20px 20px;
+    }
+    .myList > ul {
+        float: left;
+        line-height: 25px;
+        color: black;
+    }
+    .myList h3 {
+        padding: 20px 50px 20px 30px;
+        background-color: black;
+        color: white;
+    }
+    
+    .myMonth {
+        background-color: white;
+        grid-area: Month;
+        margin: 0px 175px 20px 20px;
+        border: solid black;
+    }
+    .myMonth > ul {
+        line-height: 25px;
+        color: black;
+    }
+    .myMonth h3 {
+        padding: 20px 50px 20px 30px;
+        background-color: black;
+        color: white;
+    }
+    .myAdvertisement {
+        grid-area: Ad;
+        background-color: rgba(250, 248, 248, 0.747);
+        padding: 6px;
+        line-height: 300px;
+    }
+
+    .myPopularAnime {
+        grid-area: Popular;
+        background-color: turquoise;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .mySoon {
+        grid-area: Soon;
+        background-color: yellow;
+        padding: 6px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .myEvent {
+        grid-area: Event;
+        background-color: black;
+        padding: 6px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .Info {
+        background-color: black;
+        border: solid white;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+        line-height: 25px;
+    }
+        
+    .myEvent:hover {
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.5s;
+    }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+    
+    .myShop {
+        grid-area: Shop;
+        background-color: beige;
+        padding: 6px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .myContact {
+        grid-area: Contact;
+        background-color: black;
+        color: white;
+        padding: 6px;
+    }
+
+</style>
+
+
+
+<body>
+   
+    <div class="myWrapper">
+        
+        
+            
+        <div class="myHeader" id="myHeader">
+                    <div><a href="HomePage.html">Home</a></div>
+                    <div><a href="AboutUs.html">About Us</a></div>
+                    <div><a href="SignUp.html">Sign Up</a></div>
+                    <div><a href="ContactUs.html">Contact Us</a></div>
+            
+        </div>
+        
+    
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div>MORE<a class="more" onclick="plusSlides(1)">&#10095;</a></div>
+        </div>
+        
+        
+        <div class="mySlideshow">
+            <h2>SlideShow</h2>
+            <div class="mySlides">
+                <div class="numbertext">1 / 7</div>
+                <img src="pic1.png" style="width: 100%">
+            </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">2 / 7</div>
+                <img src="pic2.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">3 / 7</div>
+                <img src="pic3.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">4 / 7</div>
+                <img src="pic4.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img src="pic5.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img src="pic6.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img src="pic7.png" style="width: 100%">
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+    
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+    
+        
+        </div>
+    
+        <div class="myInd">            
+            <div>Recent</div>
+            <div>Popular</div>
+            <div>Coming Soon</div>
+            <div>Shop</div>
+            <div>Join Us</div>
+        </div>
+    
+        <div class="myIntroduction">
+            <p>Short Introduction - Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima nostrum illum recusandae dolor perferendis vitae reiciendis similique velit nemo cumque facere exercitationem autem quam at praesentium et totam soluta, enim quo! Delectus molestiae possimus quo voluptates consequuntur ea voluptatibus consequatur! Libero, tempora. Tempora ipsam corrupti consectetur blanditiis nam repudiandae voluptas beatae, laboriosam impedit asperiores error ea! Commodi rem, voluptatem eos dolore ullam exercitationem quidem enim earum libero aliquid alias vitae dignissimos nesciunt blanditiis vero molestias. Quaerat beatae, eveniet doloremque facere aperiam adipisci nulla veritatis, rem harum aspernatur libero molestias. Doloremque itaque, quo dignissimos excepturi eaque vel atque qui nam?</p>
+            
+        </div>
+        <div class="myNews">
+            <table>
+                <tr>
+                    <th><h3>WHAT'S NEW</h3></th>
+                </tr>
+                <tr>
+                    <td>Tokyo Revengers</td>
+                </tr>
+                <tr>
+                    <td>My Hero Academia (Season 5)</td>
+                </tr>
+                <tr>
+                    <td>Jujutsu Kaisen</td>
+                </tr>
+            </table>
+        </div>        
+    
+        <div class="myRecent">
+            <h2>RECENT RELEASE</h2>
+        </div>
+
+        <div class="myList">
+            <h3>Genres</h3>
+            <ul>
+                <li>Action</li>
+                <li>Adventure</li>
+                <li>Comedy</li>
+                <li>Drama</li>
+                <li>Ecchi</li>
+                <li>Fantasy</li>
+                <li>Harem</li>
+                <li>Historical</li>
+                <li>Horror</li>
+                <li>Isekai</li>
+                <li>Josei</li>
+                <li>Kids</li>
+                <li>Magic</li>
+                <li>Martial Arts</li>
+                <li>Mecha</li>
+                <li>Music</li>
+                <li>Mystery</li>
+                <li>Parody</li>
+                <li>Physchological</li>
+            </ul>
+            <ul>
+                <li>Police</li>
+                <li>Reverse Harem</li>
+                <li>Romance</li>
+                <li>School</li>
+                <li>Sci-Fi</li>
+                <li>Seinen</li>
+                <li>Shoujo</li>
+                <li>Shoujo Ai</li>
+                <li>Shounen</li>
+                <li>Shounen Ai</li>
+                <li>Slice of Life</li>
+                <li>Space</li>
+                <li>Sports</li>
+                <li>Supernatural</li>
+                <li>Thriller</li>
+                <li>Tragedy</li>
+                <li>Vampire</li>
+                <li>Yaoi</li>
+                <li>Yuri</li>
+            </ul>
+        </div>
+        
+        <div class="myMonth">
+            <h3>Last Month</h3>
+            <ul>
+                <li>Anime 1</li>
+                <li>Anime 2</li>
+                <li>Anime 3</li>
+                <li>Anime 4</li>
+            </ul>
+        </div>
+
+        <div class="myAdvertisement">
+            <h2>Advertisement</h2>
+        </div>
+
+        <div class="myPopularAnime">
+            <h2>Popular Anime</h2>
+        </div>
+
+        <div class="mySoon">
+            <h2>Coming Soon</h2>
+        </div>
+
+        <div class="myEvent">
+            <div class="Info">
+                <h2>Event</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit at, eos quis repellat culpa impedit perferendis cum. Cumque nobis labore atque est, quos deleniti, perspiciatis neque error laudantium modi eius quaerat voluptate, harum sed quis! Maxime odit corrupti ullam eveniet accusamus eligendi fugit iure eaque, voluptate aspernatur est nisi beatae fuga sapiente porro cum laudantium maiores eum laborum tenetur dolores expedita placeat illo iusto! Esse impedit doloribus autem sed praesentium itaque reiciendis veritatis iure a quisquam! Esse nemo nostrum perferendis! Sunt totam possimus ipsam impedit, voluptates voluptatem voluptatum incidunt error architecto enim magni doloribus quam quos sapiente distinctio harum.</p>
+            </div>
+        </div>
+
+
+        <div class="myShop">
+            <h2>Clothing and Accessories</h2>
+            <h2>Home and Living</h2>
+            <h2>Beauty and Health</h2>
+        </div>
+
+        <div class="myContact">
+            <h2>Contact Information</h2>
+            <p>Connect</p>
+        </div>
+        
+    </div>
+
+    <script>
+        
+        
+
+        var slideIndex = 0;
+        showSlides();
+            
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+          }  
+          
+   </script>          
+    
+    
+
+      
+
+</body>
+</html>

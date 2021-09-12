@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="icon" href="ImagesUsed/favicon1.ico"/>
+    <link rel="stylesheet" href="CSS/Overall.css">
+    <link rel="stylesheet" href="CSS/HomePageStylesheet.css">
+</head>
+
+<body>
+   
+      
+    <div class="myWrapper" id="Wrapper">
+        
+        <div class="myHeader" id="myHeader"> 
+            <div class="myLogo"><a href="index.html"><img id="myHeader" src="LogosUsed/ChibiLogo.png" width="175px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href="index.html">HOME</a></div>
+                <div><a href="AboutUs.html">ABOUT US</a></div>
+                <div><a href="SignUp.html">SIGN UP</a></div>
+                <div><a href="ContactUs.html">CONTACT US</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="ImagesUsed/Icon.png" width="25px"></div>
+                
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+        
+    
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreGenres" id="moreGenres">
+            <div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+        </div>
+        
+        
+        <div class="mySlideshow">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 7</div>
+                <img src="ImagesUsed/background.png" style="width: 100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 7</div>
+                <img src="ImagesUsed/background1.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 7</div>
+                <img src="ImagesUsed/pic1.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 7</div>
+                <img src="ImagesUsed/pic2.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 7</div>
+                <img src="ImagesUsed/pic3.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 7</div>
+                <img src="ImagesUsed/pic4.png" style="width: 100%">
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 7</div>
+                <img src="ImagesUsed/pic5.png" style="width: 100%">
+            </div>            
+    
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+    
+              <audio controls autoplay loop>
+                <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+            </audio>
+        
+        </div>
+        
+    
+        <div class="myInd" id="navbar">            
+                <a href="#RECENT"><div>Recent</div></a>
+                <a href="#POPULAR"><div>Popular</div></a>
+                <a href="#SOON"><div>Coming Soon</div></a>
+                <a href="#SHOP"><div>Shop</div></a>
+                <a href="SignUp.html"><div>Join Us</div></a>
+        </div>
+
+        <div class="myIntroduction">
+            <p>Short Introduction - Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima nostrum illum recusandae dolor perferendis vitae reiciendis similique velit nemo cumque facere exercitationem autem quam at praesentium et totam soluta, enim quo! Delectus molestiae possimus quo voluptates consequuntur ea voluptatibus consequatur! Libero, tempora. Tempora ipsam corrupti consectetur blanditiis nam repudiandae voluptas beatae, laboriosam impedit asperiores error ea! Commodi rem, voluptatem eos dolore ullam exercitationem quidem enim earum libero aliquid alias vitae dignissimos nesciunt blanditiis vero molestias. Quaerat beatae, eveniet doloremque facere aperiam adipisci nulla veritatis, rem harum aspernatur libero molestias. Doloremque itaque, quo dignissimos excepturi eaque vel atque qui nam?</p>
+        </div>
+
+        <div class="myNews">
+            <table>
+                <tr>
+                    <th><h3>WHAT'S NEW</h3></th>
+                </tr>
+                <tr>
+                    <td>Tokyo Revengers</td>
+                </tr>
+                <tr>
+                    <td>My Hero Academia (Season 5)</td>
+                </tr>
+                <tr>
+                    <td>Jujutsu Kaisen</td>
+                </tr>
+                <tr>
+                    <td>Fruits Basket: The Final Season</td>
+                </tr>
+                <tr>
+                    <td>Combatants Will Be Dispatched</td>
+                </tr>                
+            </table>
+
+            <a href="News.html"><p>> Check out what's new</p></a>
+        </div>        
+    
+        <div class="myRecent">
+            <a id="RECENT">
+                <h2>RECENT RELEASE / UPDATES</h2>
+                <div class="button1" id="button1">
+                        <div class="button" onclick="openRecentContent1()" id="c1">1</div>
+                        <div class="button" onclick="openRecentContent2()" id="c2">2</div>
+                        <div class="button" onclick="openRecentContent3()" id="c3">3</div>
+                        <div class="button" onclick="openRecentContent4()" id="c4">4</div>
+                        <div class="button" onclick="openRecentContent5()" id="c5">5</div>
+                </div>
+                
+                <div class="buttons2" id="button2">
+                        <div class="button" onclick="openRecentContent4()" id="c4">4</div>
+                        <div class="button" onclick="openRecentContent5()" id="c5">5</div>
+                        <div class="button" onclick="openRecentContent6()" id="c6">6</div>
+                        <div class="button" onclick="openRecentContent7()" id="c7">7</div>
+                        <div class="button" onclick="openRecentContent8()" id="c8">8</div>
+                </div>
+            </a>
+            <div class="Content1" id="RecentContent1">
+                <div class="row1">
+                    <div><img src="ImagesUsed/Recent1.png"></div>
+                    <div><img src="ImagesUsed/Recent2.png"></div>
+                    <div><img src="ImagesUsed/Recent3.png"></div>
+                    <div><img src="ImagesUsed/Recent4.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Fate Zero:Onegal! Special</p>
+                    <p>Deatte 5-byou de Battle</p>
+                    <p>IDOLISH7:Third Beat!</p>
+                    <p>Tantel wa Mou, Shinderu</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/Recent5.png"></div>
+                    <div><img src="ImagesUsed/Recent6.png"></div>
+                    <div><img src="ImagesUsed/Recent7.png"></div>
+                    <div><img src="ImagesUsed/Recent8.jpg"></div>
+                </div>
+                <div class="caption2">
+                    <p>Shinigami Bocchan to Kuro Maid</p>
+                    <p>Boruto:Naruto Next Generations</p>
+                    <p>Edens Zero</p>
+                    <p>One Piece</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/Recent9.png"></div>
+                    <div><img src="ImagesUsed/Recent10.png"></div>
+                    <div><img src="ImagesUsed/Recent11.jpg"></div>
+                    <div><img src="ImagesUsed/Recent12.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Tokyo Revengers</p>
+                    <p>Re-Main</p>
+                    <p>Detective Conan</p>
+                    <p>Boku no Hero Academia 5th Season</p>
+                </div>
+            </div>
+
+            <div class="Content2" id="RecentContent2">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent01.png"></div>
+                    <div><img src="ImagesUsed/recent02.png"></div>
+                    <div><img src="ImagesUsed/recent03.png"></div>
+                    <div><img src="ImagesUsed/recent04.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Otome Game no Hametsu Flag shika Nai Akuyaku</p>
+                    <p>Blue Reflection Ray</p>
+                    <p>100-man no Inochi no Ue ni Ore wa Tatteiru 2nd Season</p>
+                    <p>Vanitas no Carte</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent05.png"></div>
+                    <div><img src="ImagesUsed/recent06.png"></div>
+                    <div><img src="ImagesUsed/recent07.png"></div>
+                    <div><img src="ImagesUsed/recent08.png"></div>
+                </div>
+                <div class="caption2">
+                    <p>Meikyuu Black Company</p>
+                    <p>T7S Longing for Summer Again and Again: Harukaze</p>
+                    <p>Obey Me! Special - Devildom Family Trip</p>
+                    <p>Beyblade Burst Dynamite Battle</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent09.png"></div>
+                    <div><img src="ImagesUsed/recent010.png"></div>
+                    <div><img src="ImagesUsed/recent011.png"></div>
+                    <div><img src="ImagesUsed/recent012.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Cardfight!! Vanguard: overDress (Dub)</p>
+                    <p>Shiroi Suna no Aquatope</p>
+                    <p>Peach Boy Riverside</p>
+                    <p>Shaman King (2021)</p>
+                </div>
+            </div>
+
+            <div class="Content3" id="RecentContent3">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent001.png"></div>
+                    <div><img src="ImagesUsed/recent002.png"></div>
+                    <div><img src="ImagesUsed/recent003.png"></div>
+                    <div><img src="ImagesUsed/recent004.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Scarlet Nexus</p>
+                    <p>SD Gundamn World Heroes</p>
+                    <p>Night Head 2041</p>
+                    <p>Megami-ryou no Ryoubo-kun</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent005.png"></div>
+                    <div><img src="ImagesUsed/recent006.png"></div>
+                    <div><img src="ImagesUsed/recent007.png"></div>
+                    <div><img src="ImagesUsed/recent008.png"></div>
+                </div>
+                <div class="caption2">
+                    <p>Kobayashi-san Chi no Maid Dragon S</p>
+                    <p>Tsuki ga Michibiku Isekai Douchuu</p>
+                    <p>Cheat Kusushi no Slow Life: Isekai ni Tsukurou</p>
+                    <p>BanG Dream! Movie: Episode of Roselia - II:</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent009.png"></div>
+                    <div><img src="ImagesUsed/recent0010.png"></div>
+                    <div><img src="ImagesUsed/recent0011.png"></div>
+                    <div><img src="ImagesUsed/recent0012.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Seitokai Yakuindomo Movie 2</p>
+                    <p>Sketchbook: Full Color's Picture Drama</p>
+                    <p>Aria the Crepuscolo</p>
+                    <p>Fate/kaleid liner Prisma☆Illya 2wei!</p>
+                </div>
+            </div>
+
+            <div class="Content4" id="RecentContent4">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent-1.png"></div>
+                    <div><img src="ImagesUsed/recent-2.png"></div>
+                    <div><img src="ImagesUsed/recent-3.png"></div>
+                    <div><img src="ImagesUsed/recent-4.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Tsukipro The Animation 2</p>
+                    <p>Turning Mecard W: Vandyne-ui Bimil</p>
+                    <p>Tokyo 7th Sisters: Bokura wa Aozora ni Naru</p>
+                    <p>Shounan Bakusouzoku</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent-5.png"></div>
+                    <div><img src="ImagesUsed/recent-6.png"></div>
+                    <div><img src="ImagesUsed/recent-7.png"></div>
+                    <div><img src="ImagesUsed/recent-8.jpg"></div>
+                </div>
+                <div class="caption2">
+                    <p>Red Baron</p>
+                    <p>Hover Champs</p>
+                    <p>Doraemon Movie 36: Shin Nobita no Nippon Tanjou</p>
+                    <p>Potemayo Special</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent-9.png"></div>
+                    <div><img src="ImagesUsed/recent-10.png"></div>
+                    <div><img src="ImagesUsed/recent-11.png"></div>
+                    <div><img src="ImagesUsed/recent-12.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>To Heart: Remember My Memories Specials</p>
+                    <p>To Heart: Remember My Memories</p>
+                    <p>Mini Dragon Specials</p>
+                    <p>Baldr Force Exe Resolution</p>
+                </div>
+            </div>
+
+            <div class="Content5" id="RecentContent5">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent--1.png"></div>
+                    <div><img src="ImagesUsed/recent--2.png"></div>
+                    <div><img src="ImagesUsed/recent--3.png"></div>
+                    <div><img src="ImagesUsed/recent--4.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Kono Danshi, Uchuujin to Tatakaemasu.</p>
+                    <p>Zero no Tsukaima: Princesses no Rondo Picture Drama</p>
+                    <p>Nanami-chan 3rd Series</p>
+                    <p>Nanami-chan 2nd Series</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent--5.png"></div>
+                    <div><img src="ImagesUsed/recent--6.png"></div>
+                    <div><img src="ImagesUsed/recent--7.png"></div>
+                    <div><img src="ImagesUsed/recent--8.png"></div>
+                </div>
+                <div class="caption2">
+                    <p>D4DJ Petit Mix</p>
+                    <p>Heartcatch Precure! Movie: Hana no Miyako de Fashion</p>
+                    <p>Futari wa Precure: Max Heart Movie 1</p>
+                    <p>Yes! Precure 5 Movie: Kagami no Kuni no Miracle</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent--9.png"></div>
+                    <div><img src="ImagesUsed/recent--10.png"></div>
+                    <div><img src="ImagesUsed/recent--11.png"></div>
+                    <div><img src="ImagesUsed/recent--12.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Mobile Suit SD Gundam Mk V</p>
+                    <p>Cyborg 009 (1979)</p>
+                    <p>Chikyuu Bouel Kazoku</p>
+                    <p>Hurrican Polymar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="myList">
+            <h3 onclick="openList()">Genres<div class="later">Click Here</div></h3>
+            <div class="Listing" id="myDropdown">
+                <div class="closeList" onclick="closeList()" id="closeList">X</div>
+                <ul>
+                    <li>Action</li>
+                    <li>Adventure</li>
+                    <li>Comedy</li>
+                    <li>Drama</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Isekai</li>
+                    <li>Josei</li>
+                    <li>Kids</li>
+                    <li>Magic</li>
+                    <li>Martial Arts</li>
+                    <li>Mecha</li>
+                    <li>Music</li>
+                    <li>Mystery</li>
+                    <li>Parody</li>
+                    <li>Physchological</li>
+                </ul>
+                <ul>
+                    <li>Police</li>
+                    <li>Reverse Harem</li>
+                    <li>Romance</li>
+                    <li>School</li>
+                    <li>Sci-Fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Space</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thriller</li>
+                    <li>Tragedy</li>
+                    <li>Vampire</li>
+                    <li>Yaoi</li>
+                    <li>Yuri</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mySeason">
+            <h3 onclick="openSeason()">Last Season<div class="later">Click Here</div></h3>
+            <div class="Season" id="Season">
+                <div class="closeSeason" onclick="closeSeason()" id="closeSeason">X</div>
+                <ul>
+                    <li>Darwin's Game (Season 1)</li>
+                    <li>Shaman King (Season 1)</li>
+                    <li>Monster Hunter: Legends of the Guild (2021)</li>
+                    <li>Rascal Does Not Dream of Bunny Girl Senpai (Season 1)</li>
+                    <li>The Witcher: Nightmare of the Wolf</li>
+                    <li>EDENS ZERO (Season 1)</li>
+                    <li>Life Lessons With Uramichi Oniisan</li>
+                    <li>I'm Standing on a Million Lives (Season 2)</li>
+                    <li>That Time I Got Reincarnated as a Slime (Season 2)</li>
+                    <li>The aquatope on white sand</li>
+                    <li>The Idaten Deities Know Only Peace</li>
+                    <li>Theatre of Darkness: Yamaishibai (Season 9)</li>
+                    <li>The Detective Is Already Dead</li>
+                    <li>The Duke of Death and His Maid</li>
+                    <li>Magia Record: Mahou Shoujo Madoka Magica Gaiden 2nd Season - Kakusei Zenya</li>
+                    <li>The Dungeon of Black Company</li>
+                    <li>Words Bubble Up Like Soda Pop</li>
+                    <li>How a Realist Hero Rebuilt the Kingdom</li>
+                    <li>seirei gensouki: Spirit Chronicles</li>
+                    <li>My Next Life As a Villainess: All Routes Lead to Doom! X</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="myAdvertisement">
+            <h2>Advertisement</h2>
+        </div>
+
+        <div class="myPopularAnime">
+            <h2>Popular Anime</h2>
+            <div class="slideshow-container" id="POPULAR">
+                <div class="Slides fade">
+                  <div><img src="ImagesUsed/popular1.png"></div>
+                  <div><img src="ImagesUsed/popular2.png"></div>
+                  <div><img src="ImagesUsed/popular3.png"></div>
+                  <div><img src="ImagesUsed/popular4.png"></div>
+                </div>
+              
+                <div class="Slides fade">
+                    <div><img src="ImagesUsed/popular5.png"></div>
+                    <div><img src="ImagesUsed/popular6.png"></div>
+                    <div><img src="ImagesUsed/popular7.png"></div>
+                    <div><img src="ImagesUsed/popular8.png"></div>
+                </div>
+              
+                <div class="Slides fade">
+                    <div><img src="ImagesUsed/popular9.png"></div>
+                    <div><img src="ImagesUsed/popular10.png"></div>
+                    <div><img src="ImagesUsed/popular11.png"></div>
+                    <div><img src="ImagesUsed/popular12.png"></div>
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+              <a href="PopularAnime.html"><p>> For More Popular Anime</p></a>
+            </div>
+
+        <div class="mySoon">
+            <a id="SOON"><h2>Coming Soon</h2></a>
+            
+            <div class="AnimeComing">
+                <div class="Anime">
+                    <img src="ImagesUsed/anime1.png" width="100%" class="Images">
+                    <div class="overlay">Fire Force Season 2</div>
+                </div>
+                <div class="Anime">
+                    <img src="ImagesUsed/anime2.png" width="100%" class="Images">
+                    <div class="overlay">Attack on Titan Season 4</div>
+                </div>
+                <div class="Anime">
+                    <img src="ImagesUsed/anime3.png" width="100%" class="Images">
+                    <div class="overlay">Demon Slayer: Kimetsu no Yaiba The Movie: Mugen Train</div>
+                </div>
+                <div class="Anime">
+                    <img src="ImagesUsed/anime6.png" width="100%" class="Images">
+                    <div class="overlay">Sword Art Online: Alicization - War of Underworld Season 2</div>
+                </div>
+            </div>
+
+            <a href="News.html"><p>> Coming Soon</p></a>
+        </div>       
+        
+        <div class="myEvent">
+            <div class="Info">
+                <h2>Event</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit at, eos quis repellat culpa impedit perferendis cum. Cumque nobis labore atque est, quos deleniti, perspiciatis neque error laudantium modi eius quaerat voluptate, harum sed quis! Maxime odit corrupti ullam eveniet accusamus eligendi fugit iure eaque, voluptate aspernatur est nisi beatae fuga sapiente porro cum laudantium maiores eum laborum tenetur dolores expedita placeat illo iusto! Esse impedit doloribus autem sed praesentium itaque reiciendis veritatis iure a quisquam! Esse nemo nostrum perferendis! Sunt totam possimus ipsam impedit, voluptates voluptatem voluptatum incidunt error architecto enim magni doloribus quam quos sapiente distinctio harum.</p>
+            </div>
+        </div>
+
+        <div class="myShop">
+            <div class="Shop">
+                <div class="Clothing">
+                    <img src="ImagesUsed/clothing.gif" alt="Avatar" class="image" width=100%>
+                    <div class="middle">
+                      <div class="text">Clothing and Accessories</div>
+                    </div>
+                </div>
+                  
+                <div class="Home">
+                    <img src="ImagesUsed/home.gif" alt="Avatar" class="image" width=100%>
+                    <div class="middle">
+                        <a id="SHOP"><div class="text">Home and Living</div></a>
+                    </div>
+                </div>
+                  
+                <div class="Beauty">
+                    <img src="ImagesUsed/beauty1.gif" alt="Avatar" class="image" width=100%>
+                    <div class="middle">
+                        <div class="text">Beauty and Health</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="Shop.html"><p>> Go to Shop</p></a>
+
+        </div>
+
+        <div class="myGap"></div>
+
+        <div class="myContact">
+            <div class="Logo">
+                <img src="LogosUsed/FacebookLogo.png" width=20px>
+                <img src="LogosUsed/InstagramLogo.png" width=20px>
+                <img src="LogosUsed/TwitterLogo.png" width=20px>
+                <img src="LogosUsed/EmailLogo.png" width=20px>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+        
+    </div>
+    
+    <script src="Javascript/Slideshow.js"></script>
+    <script src="Javascript/Overall.js"></script>
+    <script src="Javascript/OpenList.js"></script>
+    <script src="Javascript/IndexBarScroll.js"></script>
+    <script src="Javascript/OpenRecent.js"></script>
+    
+    
+
+      
+
+</body>
+</html>
