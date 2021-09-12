@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH ANIME - Anime World</title>
+    <link rel="icon" href="ImagesUsed/favicon1.ico"/>
+    <link rel="stylesheet" href="CSS/Overall.css">
+    <link rel="stylesheet" href="CSS/SearchAnime.css">
+</head>
+<body>
+    <div class="myWrapper" id="Wrapper">
+        
+        <div class="myHeader" id="myHeader"> 
+            <div class="myLogo"><a href="index.html"><img id="myHeader" src="LogosUsed/ChibiLogo.png" width="175px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href="index.html">HOME</a></div>
+                <div><a href="AboutUs.html">ABOUT US</a></div>
+                <div><a href="SignUp.html" target="_blank">SIGN UP</a></div>
+                <div><a href="ContactUs.html">CONTACT US</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="ImagesUsed/Icon.png" width="25px"></div>
+                
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+        
+    
+        <div class="myGenre" id="myGenre">
+            <div>ROMANCE</div>
+            <div>ACTION</div>
+            <div>COMEDY</div>
+            <div>DRAMA</div>
+            <div>THRILLER</div>
+            <div>SLICE OF LIFE</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreGenres" id="moreGenres">
+            <div>SHOUNEN</div>
+            <div>ADVENTURE</div>
+            <div>SHOUNEN AI</div>
+            <div>MARTIAL ARTS</div>
+            <div>SCI-FI</div>
+            <div>HISTORICAL</div>
+            <div>SUPERNATURAL</div>
+            <div>PHYSCHOLOGICAL</div>
+            <div>FANTASY</div>
+            <div>SHOUJO</div>
+            <div>SHOUJO AI</div>
+            <div>TRADEGY</div>
+            <div>MAGIC</div>
+            <div>KIDS</div>
+            <div>SCHOOL</div>
+            <div>SUPER POWER</div>
+            <div>POLICE</div>
+            <div>PARODY</div>
+            <div>SEINEN</div>
+            <div>JOSEI</div>
+            <div>HAREM</div>
+            <div>REVERSE HAREM</div>
+            <div>ISEKAI</div>
+            <div>MECHA</div>
+            <div>MYSTERY</div>
+            <div>HORROR</div>
+            <div>MUSIC</div>
+            <div>SPORTS</div>
+            <div>SPACE</div>
+            <div>VAMPIRE</div>
+            <div>ECCHI</div>
+            <div>YAOI</div>
+            <div>YURI</div>
+        </div>
+
+        <div class="myBody">
+            <h2>Search Anime</h2>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Anime..." title="Type in a name">
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:90%;">Name</th>
+                    <th style="width:10%;">Ranking</th>
+                </tr>
+                <tr>
+                    <td>Fullmetal Alchemist: Brotherhood</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Hunter x Hunter</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Steins;Gate</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Clannad: After Story</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Code Geass: Lelouch of the Rebellion </td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Cowboy Bebop </td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Fighting Spirit</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Tengen Toppa Gurren Lagann </td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Death Note </td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Monster</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Mushi-Shi </td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Gintama </td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Ginga eiyû densetsu</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>GTO</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Attack on Titan</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Hajime no Ippo: New Challenger</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Anohana: The Flower We Saw That Day </td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>Hellsing Ultimate </td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Yojôhan shinwa taikei </td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>One Piece</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Baccano!</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Psycho-Pass</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Slam Dunk: Suramu danku</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Shin Sekai Yori </td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Puella Magi Madoka Magica</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Kuroko's Basketball </td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Haikyuu!!</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Kids on the Slope </td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Toradora! </td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Samurai Champloo</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Nodame Cantabile</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Nichijou: My Ordinary Life</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Yu Yu Hakusho</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>One Outs </td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Kôkaku kidôtai: Stand Alone Complex </td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Mononoke</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Hunter x Hunter</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>Durarara!!</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>Samurai X </td>
+                    <td>39</td>
+                </tr>
+                <tr>
+                    <td>Beck: Mongolian Chop Squad</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Welcome to the NHK!</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>Natsume's Book of Friends</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>Kino's Journey</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>Ouran High School Host Club </td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>Planetes</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Clannad</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>Fullmetal Alchemist </td>
+                    <td>47</td>
+                </tr>
+                <tr>
+                    <td>Fate/Zero</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>Nana</td>
+                    <td>49</td>
+                </tr>
+                <tr>
+                    <td>Major</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Fairy Tail</td>
+                    <td>51</td>
+                </tr>
+                <tr>
+                    <td>Berserk</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>Trigun</td>
+                    <td>53</td>
+                </tr>
+                <tr>
+                    <td>The Count of Monte Cristo </td>
+                    <td>54</td>
+                </tr>
+                <tr>
+                    <td>Neon Genesis Evangelion</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td> Dragon Ball Z</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>When They Cry</td>
+                    <td>57</td>
+                </tr>
+                <tr>
+                    <td>JoJo's Bizarre Adventure</td>
+                    <td>58</td>
+                </tr>
+                <tr>
+                    <td>Darker Than Black: Kuro no keiyakusha</td>
+                    <td>59</td>
+                </tr>
+                <tr>
+                    <td>The Rose of Versailles </td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Bakemonogatari</td>
+                    <td>61</td>
+                </tr>
+                <tr>
+                    <td>Kaiba</td>
+                    <td>62</td>
+                </tr>
+                <tr>
+                    <td>Lovely Complex</td>
+                    <td>63</td>
+                </tr>
+                <tr>
+                    <td>Mobile Suit Gundam 00 </td>
+                    <td>64</td>
+                </tr>
+                <tr>
+                    <td>Kiru ra kiru: KILL la KILL</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>Meitantei Conan</td>
+                    <td>66</td>
+                </tr>
+                <tr>
+                    <td>Guardian of the Sacred Spirit</td>
+                    <td>67</td>
+                </tr>
+                <tr>
+                    <td>Black Lagoon </td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <td>Kanon</td>
+                    <td>69</td>
+                </tr>
+                <tr>
+                    <td>Maison Ikkoku </td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>Princess Tutu</td>
+                    <td>71</td>
+                </tr>
+                <tr>
+                    <td>Eureka Seven</td>
+                    <td>72</td>
+                </tr>
+                <tr>
+                    <td>Honey and Clover</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Future Diary</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>Magi: The Labyrinth of Magic</td>
+                    <td>74</td>
+                </tr>
+                <tr>
+                    <td>Big Windup! </td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>The Twelve Kingdoms</td>
+                    <td>76</td>
+                </tr>
+                <tr>
+                    <td>Future Boy Conan</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>Dragon Ball</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>Spice and Wolf</td>
+                    <td>79</td>
+                </tr>
+                <tr>
+                    <td>Soul Eater </td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Ef: A Tale of Melodies.</td>
+                    <td>81</td>
+                </tr>
+                <tr>
+                    <td>Black Butler</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>The Melancholy of Haruhi Suzumiya</td>
+                    <td>83</td>
+                </tr>
+                <tr>
+                    <td>Maid Sama!</td>
+                    <td>84</td>
+                </tr>
+                <tr>
+                    <td>Azumanga Daioh</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Charcoal Feather Federation</td>
+                    <td>86</td>
+                </tr>
+                <tr>
+                    <td>Sword Art Online</td>
+                    <td>87</td>
+                </tr>
+                <tr>
+                    <td>Ergo Proxy</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>Mobile Suit Zeta Gundam</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Dragon Ball Z Kai </td>
+                    <td>91</td>
+                </tr>
+                <tr>
+                    <td>Gungrave</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Claymore</td>
+                    <td>93</td>
+                </tr>
+                <tr>
+                    <td>FLCL</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Naruto: Shippuden</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>Serial Experiments Lain</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>Bleach</td>
+                    <td>97</td>
+                </tr>
+                <tr>
+                    <td>Last Exile</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>Erufen rîto</td>
+                    <td>99</td>
+                </tr>
+                <tr>
+                    <td>Wolf's Rain</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Mobile Suit Gundam</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>Now and Then, Here and There </td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>Fruits Basket</td>
+                    <td>103</td>
+                </tr>
+                <tr>
+                    <td>Ranma ½ </td>
+                    <td>104</td>
+                </tr>
+                <tr>
+                    <td>Space Dandy </td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td>Lupin the Third Part I</td>
+                    <td>106</td>
+                </tr>
+                <tr>
+                    <td>Môsô dairinin</td>
+                    <td>107</td>
+                </tr>
+                <tr>
+                    <td>Basilisk: The Kouga Ninja Scrolls </td>
+                    <td>108</td>
+                </tr>
+                <tr>
+                    <td>Hellsing </td>
+                    <td>109</td>
+                </tr>
+                <tr>
+                    <td>Angel Beats!</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>Cromartie High School</td>
+                    <td>111</td>
+                </tr>
+                <tr>
+                    <td>Blue Exorcist</td>
+                    <td>112</td>
+                </tr>
+                <tr>
+                    <td>City Hunter</td>
+                    <td>113</td>
+                </tr>
+                <tr>
+                    <td>Golden Time</td>
+                    <td>114</td>
+                </tr>
+                <tr>
+                    <td>Inuyasha</td>
+                    <td>115</td>
+                </tr>
+                <tr>
+                    <td>Naruto</td>
+                    <td>116</td>
+                </tr>
+                <tr>
+                    <td>His and Her Circumstances</td>
+                    <td>117</td>
+                </tr>
+                <tr>
+                    <td>Vampire Knight </td>
+                    <td>118</td>
+                </tr>
+                <tr>
+                    <td>The Idolm@ster</td>
+                    <td>119</td>
+                </tr>
+                <tr>
+                    <td>Star Blazers</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Robotech </td>
+                    <td>121</td>
+                </tr>
+                <tr>
+                    <td>Shiki </td>
+                    <td>122</td>
+                </tr>
+                <tr>
+                    <td>The Eccentric Family</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>Gakuen mokushiroku: HIGHSCHOOL OF THE DEAD</td>
+                    <td>124</td>
+                </tr>
+                <tr>
+                    <td>Free!</td>
+                    <td>125</td>
+                </tr>
+                <tr>
+                    <td>The Mightiest Disciple Kenichi </td>
+                    <td>126</td>
+                </tr>
+                <tr>
+                    <td>High School DxD</td>
+                    <td>127</td>
+                </tr>
+                <tr>
+                    <td>School Rumble</td>
+                    <td>128</td>
+                </tr>
+                <tr>
+                    <td>Lucky Star</td>
+                    <td>129</td>
+                </tr>
+                <tr>
+                    <td>Full Metal Panic!</td>
+                    <td>130</td>
+                </tr>
+                <tr>
+                    <td>K-On!</td>
+                    <td>131</td>
+                </tr>
+                <tr>
+                    <td>Deadman Wonderland </td>
+                    <td>132</td>
+                </tr>
+                <tr>
+                    <td>Kimi ni Todoke: From Me to You</td>
+                    <td>133</td>
+                </tr>
+                <tr>
+                    <td>Hyouka </td>
+                    <td>134</td>
+                </tr>
+                <tr>
+                    <td>Ghost Hunt</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>Shigurui: Death Frenzy</td>
+                    <td>136</td>
+                </tr>
+                <tr>
+                    <td>Giruti kuraun: Guilty Crown</td>
+                    <td>137</td>
+                </tr>
+                <tr>
+                    <td>Aoi Bungaku Series </td>
+                    <td>138</td>
+                </tr>
+                <tr>
+                    <td>Higashi no Eden</td>
+                    <td>139</td>
+                </tr>
+                <tr>
+                    <td>D.Gray-man </td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>Ayakashi - Samurai Horror Tales</td>
+                    <td>141</td>
+                </tr>
+                <tr>
+                    <td>Slayers Try</td>
+                    <td>142</td>
+                </tr>
+                <tr>
+                    <td>Blood+</td>
+                    <td>143</td>
+                </tr>
+                <tr>
+                    <td>Nadia: The Secret of Blue Water</td>
+                    <td>144</td>
+                </tr>
+                <tr>
+                    <td>Usagi Drop</td>
+                    <td>145</td>
+                </tr>
+                <tr>
+                    <td>The Rose of Versailles</td>
+                    <td>146</td>
+                </tr>
+                <tr>
+                    <td>Dear Brother</td>
+                    <td>147</td>
+                </tr>
+                <tr>
+                    <td>Escaflowne</td>
+                    <td>148</td>
+                </tr>
+                <tr>
+                    <td>Tenchi Muyô!</td>
+                    <td>149</td>
+                </tr>
+                <tr>
+                    <td>Cutie Honey</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>Kimagure Orange Road</td>
+                    <td>151</td>
+                </tr>
+                <tr>
+                    <td>Ah! My Goddess </td>
+                    <td>152</td>
+                </tr>
+                <tr>
+                    <td>Reservoir Chronicle: Tsubasa</td>
+                    <td>153</td>
+                </tr>
+                <tr>
+                    <td>The Wallflower</td>
+                    <td>154</td>
+                </tr>
+                <tr>
+                    <td>Kaleido Star: New Wings </td>
+                    <td>155</td>
+                </tr>
+                <tr>
+                    <td>Log Horizon</td>
+                    <td>156</td>
+                </tr>
+                <tr>
+                    <td>Is This a Zombie?</td>
+                    <td>157</td>
+                </tr>
+                <tr>
+                    <td>Beelzebub</td>
+                    <td>158</td>
+                </tr>
+                <tr>
+                    <td>Chihayafuru </td>
+                    <td>159</td>
+                </tr>
+                <tr>
+                    <td>A Lull in the Sea</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>Pokémon Origins </td>
+                    <td>161</td>
+                </tr>
+                <tr>
+                    <td>Akagi</td>
+                    <td>162</td>
+                </tr>
+                <tr>
+                    <td>Gantz</td>
+                    <td>163</td>
+                </tr>
+                <tr>
+                    <td>Hell Girl</td>
+                    <td>164</td>
+                </tr>
+                <tr>
+                    <td>Sailor Moon</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>Magic Knight Rayearth</td>
+                    <td>166</td>
+                </tr>
+                <tr>
+                    <td>Shaman King</td>
+                    <td>167</td>
+                </tr>
+                <tr>
+                    <td>Blast of Tempest: The Civilization Blaster</td>
+                    <td>168</td>
+                </tr>
+                <tr>
+                    <td>XXXHOLiC</td>
+                    <td>169</td>
+                </tr>
+                <tr>
+                    <td>Phantom: Requiem for the Phantom</td>
+                    <td>170</td>
+                </tr>
+                <tr>
+                    <td>Btooom!</td>
+                    <td>171</td>
+                </tr>
+                <tr>
+                    <td>Sekirei</td>
+                    <td>172</td>
+                </tr>
+                <tr>
+                    <td>Chobits</td>
+                    <td>173</td>
+                </tr>
+                <tr>
+                    <td>Please Teacher!</td>
+                    <td>174</td>
+                </tr>
+                <tr>
+                    <td>To Love-Ru Darkness</td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    <td>Love Hina</td>
+                    <td>176</td>
+                </tr>
+                <tr>
+                    <td>Heaven's Lost Property</td>
+                    <td>177</td>
+                </tr>
+                <tr>
+                    <td>Ichiban ushiro no daimaou</td>
+                    <td>178</td>
+                </tr>
+                <tr>
+                    <td>Kaze no Stigma</td>
+                    <td>179</td>
+                </tr>
+                <tr>
+                    <td>Okami=san and Her Seven Companions</td>
+                    <td>180</td>
+                </tr>
+                <tr>
+                    <td>Baka and Test: Summon the Beasts</td>
+                    <td>181</td>
+                </tr>
+                <tr>
+                    <td>RIN ~Daughters of Mnemosyne~</td>
+                    <td>182</td>
+                </tr>
+                <tr>
+                    <td>Kamisama hajimemashita</td>
+                    <td>183</td>
+                </tr>
+                <tr>
+                    <td>Moon Phase</td>
+                    <td>184</td>
+                </tr>
+                <tr>
+                    <td>It started with a Kiss</td>
+                    <td>185</td>
+                </tr>
+                <tr>
+                    <td>Nisekoi</td>
+                    <td>186</td>
+                </tr>
+                <tr>
+                    <td>Haganau: I Don't Have Many Friends</td>
+                    <td>187</td>
+                </tr>
+                <tr>
+                    <td>Date a Live</td>
+                    <td>188</td>
+                </tr>
+                <tr>
+                    <td>Sukuru deizu</td>
+                    <td>189</td>
+                </tr>
+                <tr>
+                    <td>Kyoukai no kanata</td>
+                    <td>190</td>
+                </tr>
+                <tr>
+                    <td>The Devil Is a Part-Timer!</td>
+                    <td>191</td>
+                </tr>
+                <tr>
+                    <td>Working!!</td>
+                    <td>192</td>
+                </tr>
+                <tr>
+                    <td>Strike the Blood</td>
+                    <td>193</td>
+                </tr>
+                <tr>
+                    <td>Gargantia on the Verdurous Planet</td>
+                    <td>194</td>
+                </tr>
+                <tr>
+                    <td>WataMote: No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!</td>
+                    <td>195</td>
+                </tr>
+                <tr>
+                    <td>Blood Lad</td>
+                    <td>196</td>
+                </tr>
+                <tr>
+                    <td> Nobunaga the Fool</td>
+                    <td>197</td>
+                </tr>
+                <tr>
+                    <td>Tokyo Ravens</td>
+                    <td>198</td>
+                </tr>
+                <tr>
+                    <td>Karneval</td>
+                    <td>199</td>
+                </tr>
+                <tr>
+                    <td>Kiss x sis</td>
+                    <td>200</td>
+                </tr>
+            </table>
+            
+        </div>
+
+        <div class="Ad">
+
+        </div>
+
+        <div class="myGap"></div>
+
+        <div class="myContact">
+            <div class="Logo">
+                <img src="LogosUsed/FacebookLogo.png" width=20px>
+                <img src="LogosUsed/InstagramLogo.png" width=20px>
+                <img src="LogosUsed/TwitterLogo.png" width=20px>
+                <img src="LogosUsed/EmailLogo.png" width=20px>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html" target="_blank">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+        
+    </div>
+
+    <script src="Javascript/Overall.js"></script>
+    <script src="Javascript/SearchAnime.js"></script>
+
+</body>
+</html>
