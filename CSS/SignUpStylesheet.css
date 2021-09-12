@@ -10,52 +10,47 @@
                         "Contact Contact Contact"
 
 }
+body {
+    background-color: rgba(230, 222, 222, 0.356);
+}
+h2 {
+    position: absolute;
+    top: -42px;
+    left: 3px;
+}
 
 .myBody {
+    position: relative;
     grid-area: Body;
-    padding: 75px 25px 75px 25px;
     background-color: white;
-    border: 5px solid black;
-    border-radius: 10px 50px;
-    margin: 300px 20% 100px 20%;
+    padding: 40px ;
+    margin: 300px 23% 100px 23%;
+    border-radius: 15px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     font-size: 13px;
 }
-
+.PersonalInfo p {
+    font-size: 15px;
+    margin: auto;
+    font-weight: bold;
+}
  
-input[type=text] {  
-padding: 10px;  
-margin-top: 8px;  
-width: 300px;
-font-size: 13px;  
-border: 1px solid black;
-border-radius: 3px;
+.myBody input[type=text] {  
+    padding: 7px;   
+    width: 99%;
+    font-size: 13px;  
+    border: none;
+    border-bottom: 1px solid grey;
 }  
-#First input[type=text] {
-    margin-left: 132px;
-}
-#Last input[type=text] {
-    margin-left: 132px;
-}
-#Email input[type=text] {
-    margin-left: 164px;
-}
-#Phone input[type=text] {
-    margin-left: 109px;
-}
-#Username input[type=text] {
-    margin-left: 137px;
-}
-#Password input[type=text] {
-    margin-left: 139px;
-}
 .Check {
     display: flex;
     justify-content: center;
 }
 input[type=checkbox] {
     margin-right: 10px;
+    vertical-align: middle;
 }
 .PersonalInfo {
     display: flex;
@@ -63,11 +58,12 @@ input[type=checkbox] {
     line-height: 50px;
 }
 .SubmitButton {
-    display: grid;
-    place-content: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }
 input[type=submit] {
-    padding: 8px;
+    padding: 10px;
     font-size: 14px;
     font-weight: bold;
 }

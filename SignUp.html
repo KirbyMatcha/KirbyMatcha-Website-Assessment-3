@@ -93,16 +93,35 @@
         </div>
 
         <div class="myBody">
-            <form name="myForm" onsubmit="return validateForm()" method="post">
+            <h2>Sign Up</h2>
+            <form name="myForm" method="post">
                 <div class="PersonalInfo">
-                    <div id="First">First Name: <input type="text" placeholder="Enter First Name" name="fname"></div>
-                    <div id="Last">Last Name: <input type="text" placeholder="Enter Last Name" name="fname"></div>
-                    <div id="Email">Email: <input type="text" placeholder="Enter Email" name="fname"></div>
-                    <div id="Phone">Phone Number: <input type="text" placeholder="Enter Phone Number" name="fname"></div>
-                    <div id="Username">Username: <input type="text" placeholder="Enter Username" name="fname"></div>
-                    <div id="Password">Password: <input type="text" placeholder="Enter Password (6-16 characters)" name="fname"></div>
-                    <div><input type="checkbox" id="myCheck"> I agree to the terms and conditions</div>
-                    <div class="SubmitButton"><input type="submit" value="Submit Form"></div>
+                    <div>
+                        <p>Full Name:</p>
+                        <input type="text" placeholder="Enter Full Name" name="fname">
+                    </div>
+                    <div>
+                        <p>Email:</p>
+                        <input type="text" placeholder="Email" name="fname">
+                    </div>
+                    <div>
+                        <p>Username:</p>
+                        <input type="text" placeholder="Enter Username" name="fname">
+                    </div>
+                    <div>
+                        <p>Password:</p>
+                        <input type="text" placeholder="Enter Password" name="fname">
+                    </div>
+                    <div>
+                        <p>Confirm Password</p>
+                        <input type="text" placeholder="Enter Password Again" name="fname">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="myCheck"> I agree to the <em>terms</em> and <em>conditions</em>
+                    </div>                    
+                    <div class="SubmitButton">
+                        <input type="submit" value="Submit Form">
+                    </div>
                 </div> 
             </form>
         </div>
