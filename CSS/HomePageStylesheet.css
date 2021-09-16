@@ -343,6 +343,11 @@ th {
     background-color: rgba(250, 248, 248, 0.747);
     padding: 6px;
     line-height: 300px;
+    margin: 5%;
+    justify-content: center;
+}
+.myAdvertisement img {
+    width: 100%;
 }
 
 
