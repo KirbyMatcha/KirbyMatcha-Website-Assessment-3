@@ -85,9 +85,28 @@
 }
 .Ad {
     grid-area: Ad;
-    height: 200px;
-    background-color: bisque;
+    background-color: white;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "Photo Taste";
 }
+.Photoshop {
+    grid-area: Photo;
+    display: flex;
+}
+.Photoshop div {
+    flex: 33.33%;
+}
+.TasteLikeMagicAd {
+    grid-area: Taste;
+}
+
+
+
+
+
 
     @media (max-width :900px) {
         .SocialMedia {
