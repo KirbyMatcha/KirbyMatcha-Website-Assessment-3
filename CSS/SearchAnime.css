@@ -1,12 +1,11 @@
 .myWrapper {
     display: grid;
     grid-template-columns: 70vw 30vw;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "Header Header"
                         "Genres Genres"
                         "moreGenres moreGenres "
                         "Body Body"
-                        "Ad Ad"
                         "Gap Gap"
                         "Contact Contact"
 
@@ -49,10 +48,5 @@
   }
   
 
-.Ad {
-    grid-area: Ad;
-    height: 200px;
-    background-color: bisque;
-}
 
 

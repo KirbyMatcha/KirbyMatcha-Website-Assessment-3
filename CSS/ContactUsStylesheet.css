@@ -82,9 +82,37 @@
 }
 .Ad {
     grid-area: Ad;
-    height: 200px;
-    background-color: bisque;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0px;
+    border-top: solid black;
+    border-bottom: solid black;
 }
+.Ad div {
+    flex: 20% 60% 20%;
+}
+.Ad img {
+    width: 100%;
+    filter: blur(0.75px);
+    border-radius: 20px;
+}
+.Ad .Info {
+    padding: 15px;
+    font-family: monospace;
+}
+.Info h2 {
+    font-size: xx-large;
+}
+
+
+
+
+
 
 
 @media (max-width :900px) {

@@ -103,9 +103,14 @@
 .Photoshop div {
     flex: 33.33%;
 }
+.Photoshop img {
+    width: 80%;
+    margin: 0 10%;
+}
 .Photoshop {
-    font-family: cursive ;
+    font-family: monospace ;
     text-align: center;
+    align-items: center;
 }
 .Photoshop h2{
     font-weight: bold;
@@ -115,7 +120,7 @@
     grid-area: Taste;
     display: flex;
     flex-direction: row-reverse;
-    vertical-align: middle;
+    align-items: center;
 }
 
 
