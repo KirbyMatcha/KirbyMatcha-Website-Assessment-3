@@ -95,12 +95,27 @@
 .Photoshop {
     grid-area: Photo;
     display: flex;
+    border: solid black;
+    background-color: rgba(235, 231, 231, 0.233);
+    padding: 5px;
+    border-radius: 10px;
 }
 .Photoshop div {
     flex: 33.33%;
 }
+.Photoshop {
+    font-family: cursive ;
+    text-align: center;
+}
+.Photoshop h2{
+    font-weight: bold;
+    font-size: 25px;
+}
 .TasteLikeMagicAd {
     grid-area: Taste;
+    display: flex;
+    flex-direction: row-reverse;
+    vertical-align: middle;
 }
 
 
