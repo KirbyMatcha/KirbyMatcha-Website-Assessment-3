@@ -1,3 +1,4 @@
+// Code for the slideshows in PopularAnime.html
 var slideIndex = [1,1];
 var slideId = ["mySlides1", "mySlides2"]
 showSlides(1, 0);

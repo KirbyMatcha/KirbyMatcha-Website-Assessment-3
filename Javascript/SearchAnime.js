@@ -1,3 +1,4 @@
+// Code for the filter table in SearchAnime.html
 function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");

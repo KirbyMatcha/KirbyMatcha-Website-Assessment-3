@@ -1,3 +1,4 @@
+//Code for automatic slideshow
 let currentSlide = 0;
 const slides = document.querySelectorAll(".mySlides")
 const dots = document.querySelectorAll('.dot')
@@ -23,11 +24,6 @@ const prev = () => {
   init(currentSlide)
 }
 
-document.querySelector(".next").addEventListener('click', next)
-
-document.querySelector(".prev").addEventListener('click', prev)
-
-
 setInterval(() => {
   next()
 }, 3000);
@@ -43,7 +39,7 @@ dots.forEach((dot, i) => {
 
 
 
-
+// Code for the manual slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
 
