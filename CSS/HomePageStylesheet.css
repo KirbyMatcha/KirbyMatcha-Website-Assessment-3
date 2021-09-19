@@ -515,7 +515,12 @@ th {
     color: white;
     margin: 20px;
     padding: 20px;
-    line-height: 25px;
+    line-height: 20px;
+    text-align: center;
+    font-family: monospace;
+}
+.Info .larger {
+    font-size: 20px;
 }
 
 
